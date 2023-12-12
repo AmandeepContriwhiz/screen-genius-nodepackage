@@ -1,0 +1,248 @@
+block variables
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    link(rel="shortcut icon", href="/favicon.ico")
+    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(name="theme-color", content="#000000")
+    title #{title}
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato")
+    link(rel="stylesheet" href="/css/home.css")
+    script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
+    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous")
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous")
+    script(src="/js/jquery.js")
+    script(src="/js/custom.js")
+  body
+    div#root.home-page
+        div.header_section
+            div.container.top_container
+                header.ScreenGenius-header
+                    nav.navbar.navbar-expand-lg.navbar-light
+                        div.container-fluid
+                            a.navbar-brand(href='#')
+                                img(src='images/home/logo.png', height='80', alt='CoolBrand')
+                            button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarNavAltMarkup', aria-controls='navbarNavAltMarkup', aria-expanded='false', aria-label='Toggle navigation')
+                                span.navbar-toggler-icon
+                        div#navbarNavAltMarkup.collapse.navbar-collapse
+                            div.navbar-nav
+                                a.nav-item.nav-link.active(href="/") Home
+                                a.nav-item.nav-link(href='#screenshot-tab') Capture
+                                a.nav-item.nav-link(href='#screen-recording-tab') Recorder
+                                a.nav-item.nav-link(href='#pricing-plans-tab') Pricing
+                                a.nav-item.nav-link(href='#frequently-asked-questions') FAQ
+                            div.navbar-nav.ms-auto
+                                if session !== null
+                                    a.nav-item.nav-link.login(href='/dashboard') Dashboard
+                                else 
+                                    a.nav-item.nav-link.login(href='/login') Login
+                                a.nav-item.nav-link.get_started(href='https://chrome.google.com/webstore/detail/screengenius-screenshot-s/eclnikmacpcandpbfjkjgnoicmlpkkdj', target='_blank') Get started
+                div.container-fluid
+                    div.row
+                        div.col-lg-6.d-flex.flex-column.justify-content-center.ScreenGenius-mid
+                            div.left-content
+                                h2 Capture your screen like a pro!.
+                                p Say Goodbye to bland Screen Captures! Take screenshots, record screen & effortlessly share with a dash of your awesome personality.
+                                a.btn.btn-primary.chrome-thisbtn(href="https://chrome.google.com/webstore/detail/screengenius-screenshot-s/eclnikmacpcandpbfjkjgnoicmlpkkdj") Get Chrome Extension
+                        div.col-lg-6.d-flex.flex-column.justify-content-center.ScreenGenius-mid
+                            div#carouselExampleControls.carousel.slide(data-bs-ride='carousel')
+                                div.carousel-indicators
+                                    button.active(type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0")
+                                    button(type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1")
+                                    button(type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2")
+                                    button(type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="3")
+                                div.carousel-inner
+                                    div.carousel-item.active
+                                        img.d-block.w-100(src='images/home/slider_1.png', alt='First slide')
+                                    div.carousel-item
+                                        img.d-block.w-100(src='images/home/slider_2.png', alt='Second slide')
+                                    div.carousel-item
+                                        img.d-block.w-100(src='images/home/slider_3.png', alt='Third slide')
+                                    div.carousel-item   
+                                        img.d-block.w-100(src='images/home/slider_4.png', alt='Fourth slide')
+                            //-   button.carousel-control-prev(type='button', data-bs-target='#carouselExampleControls', data-bs-slide='prev')
+                            //-     span.carousel-control-prev-icon(aria-hidden='true')
+                            //-     span.visually-hidden Previous
+                            //-   button.carousel-control-next(type='button', data-bs-target='#carouselExampleControls', data-bs-slide='next')
+                            //-     span.carousel-control-next-icon(aria-hidden='true')
+                            //-     span.visually-hidden Next
+                            
+        div.container-fluid.turn_scree_captures_section
+            div.row
+                div.turn_scree_captures
+                    h5 Turn Screen Captures into Stylish Masterpieces.
+                    p Start Creating. Start Impressing.
+                    a.btn.btn-primary.ScreenGenius_todaybtn(href="https://chrome.google.com/webstore/detail/screengenius-screenshot-s/eclnikmacpcandpbfjkjgnoicmlpkkdj") Get Chrome Extension
+                        img(src="images/get-ext-arrow.png")
+                div.turn_scree_captures_feature
+                    span.camraIcon
+                        img(src="images/home/camra.png")
+                        p Dab to fab Snaps!
+                    span.otherScreen
+                        img(src="images/home/recording.png")
+                        p Record. Share. Wow!
+                    span.otherScreen
+                        img(src="images/home/download.png")
+                        p Seamless Cloud Peace
+                    span.otherScreen
+                        img(src="images/home/synk.png")
+                        p Snap. Sync. Access
+        div.container#screenshot-tab
+            div.row
+                div.section_title
+                    h1 Screenshot Smarter. Not Harder.
+                    p Spark inspiration, share ideas, & ignite conversations
+                div.col-lg-6.d-flex.flex-column.justify-content-center.conversations-mid.screenshots
+                    img(src="images/home/activatity.png")
+                
+                div.col-lg-6.conversations-mid
+                    span.screenshot_smarter
+                        img(src="images/home/cam-camra.png")
+                        h5 Capture screen like a boss!
+                        p Snap full screen area, visible area or select as you wish
+                    span.screenshot_smarter
+                        img(src="images/home/edit_icon.png")
+                        h5 Edit & Annotate your heart's content
+                        p Crop it, add text, highlights, blur & other effects with ease.
+                    span.screenshot_smarter
+                        img(src="images/home/share.png")
+                        h5 Be ready to share a flick
+                        p Upload to cloud, share via link or by email
+                    span.screenshot_smarter
+                        img(src="images/home/menu.png")
+                        h5 All media roads lead to dashboard!
+                        p View, access, manage screenshots through dashboard
+        div.container-fluid.screen_recording_game
+            div.container#screen-recording-tab
+                div.row
+                    div.section_title
+                        h1 Take your Screen Recording game up a notch!
+                        p Captivate, educate or entertain. Make people engage with your content like never before
+                    div.col-lg-6.conversations-mid
+                        span.take_your_screen
+                            img(src="images/home/vid-camra.png")
+                            h5 Capture screen like a boss!
+                            p Snap full screen area, visible area or select as you wish
+                        span.take_your_screen
+                            img(src="images/home/edit_icon.png")
+                            h5 Edit & Annotate your heart's content
+                            p Crop it, add text, highlights, blur & other effects with ease.
+                        span.take_your_screen
+                            img(src="images/home/share.png")
+                            h5 Be ready to share a flick
+                            p Upload to cloud, share via link or by email
+                        span.take_your_screen
+                            img(src="images/home/menu.png")
+                            h5 All media roads lead to dashboard!
+                            p View, access, manage screenshots through dashboard
+                    div.col-lg-6.d-flex.flex-column.justify-content-center.conversations-mid.screenshots
+                        img(src="images/home/activatity2.png")      
+        div.container-fluid.features_in_beta
+            div.container#pricing-plans-tab
+                div.row
+                    div.section_title
+                        h1 Drumroll please! It's our beta launch
+                        p Ready to make it to the next level? Soon will be launching our paid plans, perfect for those looking to scale their use
+                    div.features_in_beta_plan
+                        span.features_in_beta_plan_span
+                            h5 Features in Beta
+                            p 3 free announcements / Month
+                            ul
+                                li
+                                    img(src="images/home/bxs-check-circle.png") 
+                                    span Unlimited Local Captures & Recording
+                                li
+                                    img(src="images/home/bxs-check-circle.png") 
+                                    span 15 Screen Recordings on Cloud
+                                li
+                                    img(src="images/home/bxs-check-circle.png") 
+                                    span 30 Screenshots on Cloud
+                                li
+                                    img(src="images/home/bxs-check-circle.png") 
+                                    span Editors for both Images and Videos
+                                li
+                                    img(src="images/home/bxs-check-circle.png") 
+                                    span Share them infinitely
+                            a.btn.btn-primary.chrome-thisbtn(href="https://chrome.google.com/webstore/detail/screengenius-screenshot-s/eclnikmacpcandpbfjkjgnoicmlpkkdj") Get Chrome Extension
+        div.container-fluid.frequently_asked_questions
+            div.container#frequently-asked-questions
+                div.row
+                    div.section_title
+                        h1 Frequently Asked Questions
+                    div.col-lg-6
+                        span
+                            h6 Is ScreenGenius free? Any number limit on the screenshots & recordings I do?
+                            p Yes, it's absolutely free as of now, so take advantage of that as much as you can.
+                        span
+                            h6 How can I upgrade to the premium version?
+                            p Premium version is on the card. As this is a beta launch, we'll soon notify you once upgrade is available.
+                        span
+                            h6 Till when my generated share links will be valid?
+                            p All your screenshots & screen recordings links are here to stay, as long as you want to keep them in public.
+                    div.col-lg-6
+                        span
+                            h6 Can I be worry-free that my data is safe with ScreenGenius?
+                            p No doubt for that. Your data safety & security is our top priority. You can relax, your information is in safe hands.
+                        span
+                            h6 What if I got a special feature request?
+                            p We're all ears for that. Though we can't promise the timelines but we pay attention to all ideas. Please submit your request in feedback section.
+                        span
+                            h6 Can I access ScreenGenius from all of my devices?
+                            p A big yes to that. Access from any device without any restrictions.
+        div.container.ScreenGenius_today
+            div.row
+                span
+                    h4 Try ScreenGenius today!
+                    a.btn.btn-primary.ScreenGenius_todaybtn(href="https://chrome.google.com/webstore/detail/screengenius-screenshot-s/eclnikmacpcandpbfjkjgnoicmlpkkdj") Get Chrome Extension
+                        img(src="images/get-ext-arrow.png")
+        div.footer
+            div.container
+                div.row
+                    div.col-lg-4
+                        span
+                            img(src="images/home/footer-logo.png").sitetitle
+                            p 
+                                span Screenshots & Screen recordings 
+                                span with a dash of your unique personality.
+                    div.col-lg-4
+                        span
+                            ul
+                                li 
+                                    a(href="#") About us
+                                li 
+                                    a(href="#") Feedback
+                                li 
+                                    a(href="#") Privacy
+                    div.col-lg-4
+                        span
+                            h5 Contact us
+                            p Please contact us at the given email address. We will get back to you within 24 hours.
+                            p 
+                                a(mailto="support@screengenius.io") support@screengenius.io
+                    div.social_icon_copy_right
+                        div.row
+                            div.col-lg-4
+                                span 
+                                    img(src="images/home/facebook.png")
+                                span 
+                                    img(src="images/home/instagram.png")
+                                span 
+                                    img(src="images/home/twitter.png")
+                                span 
+                                    img(src="images/home/linkedin.png")
+                            div.col-lg-4 
+                                span.Copyright Copyright ® 2023 Company All rights Reserved
+                            div.col-lg-4 
+                                span.Quixy_Logo powered by 
+                                    img(src="images/home/Quixy_Logo.png")
+            
+
+                
+            
+            
+            
+        

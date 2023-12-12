@@ -1,0 +1,64 @@
+block variables
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    link(rel="shortcut icon", href="/favicon.ico")
+    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(name="theme-color", content="#000000")
+    title #{title}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    link(rel="stylesheet" href="/css/home.css")
+    script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
+    script(src="/js/jquery.js")
+    script(src="/js/custom.js")
+  body
+    div#root.uninstall-page
+        div.header_section
+            div.container.top_container
+                header.ScreenGenius-header
+                    nav.navbar.navbar-expand-lg.navbar-light
+                        div.container-fluid
+                            a.navbar-brand(href="/")
+                                img(src="images/home/logo.png"  height="80" alt="CoolBrand")
+                div.container-fluid
+                    div.row
+                        div.star_emoji
+                            span.thankEmoji
+                                span.emoji
+                                    img(src="images/home/uninstallemoji.png")
+                                    span.emoji_content
+                                    h5 ScreenGenius successfully uninstalled from your device now!
+                                    p Your experience matters to us. Would you mind taking few minutes to share your feedback on our product?
+        div.container.screen_recording_game
+            div.row
+                div.col-lg-12.conversations-mid.extension_screen
+                    div.section_title(style="text-align: center; margin-top: 5%; margin-bottom: 2%;")
+                        h5 Share your feedback with us
+                    div.form-row
+                        div.form-group.col-md-6
+                            label(for="inputEmail4") Email Address
+                            input.form-control#inputEmail4(type="email" name="sender-email" placeholder="Enter")
+                    div.form-row
+                        div.form-group.col-md-6
+                            label(for="inputEmail4") Why did you uninstall ScreenGenius?
+                            textarea.form-control#inputEmail4(type="text" name="why-uninstall" placeholder="Enter")
+                        
+                        div.form-group.col-md-6
+                            label(for="inputPassword4") Are you using any other tool instead of ScrenGenius?
+                            textarea.form-control#inputPassword4(type="text" name="other-tool" placeholder="Enter")
+                    div.form-row
+                        div.form-group.col-md-6
+                            label(for="inputEmail4") What can we do to improve ScreenGenius?
+                            textarea.form-control#inputEmail4(type="text" name="what-to-improve" placeholder="Enter")
+                    div.btn_section_row
+                        img.loader-image(src="images/light-loader.gif")
+                        button.btn.btn-primary.btn_cancel_submit.submitbtn(type="submit") Submit
+                div.col-lg-12.thank-you-screen
+                    div.thank-you-screen-title(style="text-align: center; margin-top: 5%; margin-bottom: 5%;")
+                        span Your Feedback is received successfully.
+                
+            
+            
+            
+            

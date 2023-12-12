@@ -1,0 +1,91 @@
+block variables
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    link(rel="shortcut icon", href="/favicon.ico")
+    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(name="theme-color", content="#000000")
+    title #{title}
+    link(rel="stylesheet" href="/css/style.css")
+    script(src="/js/jquery.js")
+    script(src="/js/jquery-ui.min.js")
+    script(src="/js/custom.js")
+    //- script(async,src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9210273506493361",crossorigin="anonymous")
+  body
+    div#root
+        div#video-editor-wrapper
+            div#video-editor-inner
+                //- ins.adsbygoogle(style="display:block",data-ad-client="ca-pub-9210273506493361",data-ad-slot="7609198252",data-ad-format="auto",data-full-width-responsive="true")
+                //- script (adsbygoogle = window.adsbygoogle || []).push({});
+                div#quix-important-message
+                    span.quix-important-message Dear Users, please note: in this Beta version, inactive Data files will be deleted in 45 days. Thanks for your support.
+                div#video-editor-top
+                    div#video-editor-back
+                        span 
+                            img(src="/images/quix-ve-back-arrow-icon.png")
+                        a(href="/dashboard") 
+                            span.video-editor-title Go to Dashboard
+                    div#video-editor-nav
+                        img.video-editor-undo(src="/images/quix-undo-icon.png",title="Coming soon")
+                        img.video-editor-redo(src="/images/quix-redo-icon.png",title="Coming soon")
+                        img.video-editor-reset(src="/images/quix-reset-icon.png",title="Coming soon")
+                        button.editor-save-button Save
+                div#video-editor-content
+                    div#video-editor-content-inner
+                        video(src="")
+                    div.video-editor-controls
+                        img.video-editor-backward(src="/images/quix-ve-fast-backward-icon.png",action-type="backward",title="Backward")
+                        img.video-editor-play(src="/images/quix-ve-play-icon.png",action-type="play",title="Play")
+                        img.video-editor-pause(src="/images/quix-ve-pause-icon.png",action-type="pause",title="Pause")
+                        img.video-editor-forward(src="/images/quix-ve-fast-forward-icon.png",action-type="forward",title="Forward")
+                        div.video-progress-timer-outer
+                            span.video-progress-timer-now 00:00
+                            span.video-progress-timer-total / 00:00
+                div#video-editor-bottom
+                    div#video-editor-editing
+                        div#video-editor-editing-options
+                            div#video-editor-editing-options-inner
+                                div.video-editor-editing-options-col.text
+                                div.video-editor-editing-options-col.blur
+                                div.video-editor-editing-options-col.image
+                        div#video-editor-editing-toolbar
+                            span.video-editing-text(action-type="edit-text",title="Text")
+                                img(src="/images/quix-ve-text-icon.png")
+                            //span.video-editing-shapes(action-type="edit-shapes")
+                                //img(src="/images/quix-ve-shapes-icon.png")
+                            span.video-editing-blur(action-type="edit-blur",title="Blur")
+                                img(src="/images/quix-ve-blur-icon.png")
+                            span.video-editing-crop(action-type="edit-crop",title="Trim")
+                                img(src="/images/quix-ve-crop-icon.png")
+                            span.video-editing-music(action-type="edit-music",title="Background Music")
+                                input#input-upload-music(type="file",accept='audio/mp3')
+                                img(src="/images/quix-ve-bg-musin-icon.png")
+                            span.video-editing-image(action-type="edit-image",title="Image")
+                                input#upload-image(type="file",accept='image/jpg,image/png')
+                                img(src="/images/quix-ve-photo-upload-icon.png")
+                        div#video-editor-editing-selection
+                            div#video-editor-editing-selection-inner
+                                div#video-progress-pointer
+                                    div#video-progress-pointer-inner
+                                div#video-progress-bar
+                                    div#video-progress-bar-inner
+                                        span.video-progress-start-time 00:00
+                                        span.video-progress-end-time 00:00
+                                        div.video-progress-scale
+                                            div.video-progress-scale-inner
+                                div#video-annotation-blocks
+                                    div#video-annotation-blocks-inner
+        div#quix-dashboard-overlay
+        div#quix-dashboard-message
+            img(src="/images/EditVideoLoader.gif")
+            span
+        iframe#ifrm(name="ifrm",onload="getHardWrappedText();",style="display:none;")
+        div#quix-dashboard-popup
+            div.quix-dashboard-popup-inner
+                div.quix-dashboard-popup-title
+                    div.quix-dashboard-popup-title-inner
+                div.quix-dashboard-popup-body
+                    div.quix-dashboard-popup-body-inner
+                div.quix-dashboard-close
+                    img(src="/images/quix-close.png")

@@ -1,0 +1,31 @@
+extends layout
+
+block layout-content
+    div#quix-dashboard-content
+        div.quix-dashboard-content-actions
+            div.quix-dashboard-content-actions-inner
+                div.quix-dashboard-new-item-button.dashboard-button
+                    img(src="images/quix-dash-add-icon.png")
+                    span New Item
+                select#quix-dashboard-actions(name="quix-dashboard-actions") 
+                    option(value="") Choose Action
+                    option(value="trash") Restore
+                    option(value="delete") Delete
+                select#quix-dashboard-sort-actions(name="quix-dashboard-sort-actions",data-type="trashed") 
+                    option(value="") Sort By
+                    option(value="name") Name
+                    option(value="size") Size
+                    option(value="date") Date
+        div#quix-dashboard-content-tabs
+            div.quix-dashboard-content-tabs-inner
+                div.quix-tab.quix-tab-images.active
+                    span My Screenshots
+                div.quix-tab.quix-tab-videos
+                    span My Screen Recordings
+        div#quix-dashboard-content-tabs-content
+            div.quix-dashboard-content-images
+            div.quix-dashboard-content-videos
+                                
+
+
+

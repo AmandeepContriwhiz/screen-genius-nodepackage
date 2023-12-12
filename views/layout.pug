@@ -1,0 +1,142 @@
+block variables
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    link(rel="shortcut icon", href="/favicon.ico")
+    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(name="theme-color", content="#000000")
+    title #{title}
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish")
+    link(rel="stylesheet" href="/css/style.css")
+    script(src="/js/jquery.js")
+    script(src="/js/jspdf.min.js")
+    script(src="/js/custom.js")
+    //- script(async,src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9210273506493361",crossorigin="anonymous")
+  body
+    div#root
+        div#quix-dashboard-wrapper
+            div#quix-dashboard-inner
+                //- ins.adsbygoogle(style="display:block",data-ad-client="ca-pub-9210273506493361",data-ad-slot="7609198252",data-ad-format="auto",data-full-width-responsive="true")
+                //- script (adsbygoogle = window.adsbygoogle || []).push({});
+                div#quix-important-message
+                    span.quix-important-message Dear Users, please note: in this Beta version, inactive Data files will be deleted in 45 days. Thanks for your support.    
+                div#quix-dashboard-header
+                    div.quix-dashboard-left
+                        div.quix-dashboard-logo
+                            img(src="images/home/footer-logo.png")
+                    div.quix-dashboard-middle
+                        div#quix-dashboard-sidebar
+                            div.quix-dashboard-sidebar-items
+                                a(href="/")
+                                    div.quix-dashboard-sidebar-item
+                                        span Home
+                            div.quix-dashboard-sidebar-items
+                                a(href="/dashboard")
+                                    div.quix-dashboard-sidebar-item
+                                        span My Items
+                            div.quix-dashboard-sidebar-items
+                                a(href="/starred")
+                                    div.quix-dashboard-sidebar-item
+                                        span Starred Items
+                            //- div.quix-dashboard-sidebar-items
+                            //-     a(href="/trashed")
+                            //-         div.quix-dashboard-sidebar-item
+                            //-             span Trash
+                    div.quix-dashboard-right
+                        div.quix-dashboard-new-item
+                            div.quix-dashboard-notification
+                                img(src="images/quix-dash-notifications.png")
+                            div.quix-dashboard-user
+                                img(src="images/quix-dash-user.png")
+                                div.quix-dashboard-user-profile
+                                    div.quix-dashboard-user-profile-pic
+                                        div.user-profile-pic-outer
+                                            img(src="images/quix-dash-user.png")
+                                        div.user-profile-name-outer
+                                            span.user-profile-name Alexander
+                                            span.user-profile-email alex_example.com
+                                    div.quix-dashboard-user-profile-upgrade
+                                        div.quix-dashboard-upgrade-button.dashboard-button(title="Coming Soon")
+                                            img(src="images/quix-upgrade.png")
+                                            span.user-profile-upgrade Upgrade
+                                    div.quix-dashboard-divider &nbsp;
+                                    div.quix-dashboard-user-profile-progress
+                                        div.quix-dashboard-user-profile-progress-images
+                                            img(src="images/quix-dash-cam.png")
+                                            span Images
+                                            span.images-progress
+                                                span.images-progress-inner &nbsp;
+                                        div.quix-dashboard-user-profile-progress-images
+                                            img(src="images/quix-dash-vid.png")
+                                            span Videos
+                                            span.videos-progress
+                                                span.videos-progress-inner &nbsp;
+                                    div.quix-dashboard-divider &nbsp;
+                                    div.quix-dashboard-user-profile-links
+                                        div.quix-dashboard-user-profile-links-row
+                                            span 
+                                                a(href="/#frequently-asked-questions") Help
+                                        div.quix-dashboard-user-profile-links-row
+                                            span(title="Coming Soon") Settings
+                                        div.quix-dashboard-user-profile-links-row
+                                            span.button-logout Logout
+                block layout-content
+                div.quixy-dashboard-footer
+                    div.quixy-dashboard-footer-container
+                        div.quixy-dashboard-footer-row
+                            div.quixy-dashboard-footer-col1
+                                span
+                                    img(src="images/home/footer-logo.png").sitetitle
+                                    p Screenshots & Screen recordings with a dash of your unique personality.
+                            div.quixy-dashboard-footer-col2
+                                span
+                                    ul
+                                        li 
+                                            a(href="#") About us
+                                        li 
+                                            a(href="#") Feedback
+                                        li 
+                                            a(href="#") Privacy
+                            div.quixy-dashboard-footer-col3
+                                span
+                                    h5 Contact us
+                                    p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    p +9000 0000 000
+                            hr
+                            div.social_icon_copy_right
+                                div.quixy-dashboard-footer-row
+                                    div.quixy-dashboard-footer-col4
+                                        span 
+                                            img(src="images/home/facebook.png")
+                                        span 
+                                            img(src="images/home/instagram.png")
+                                        span 
+                                            img(src="images/home/twitter.png")
+                                        span 
+                                            img(src="images/home/linkedin.png")
+                                    div.quixy-dashboard-footer-col5
+                                        span.Copyright Copyright ® 2023 Company All rights Reserved
+                                    div.quixy-dashboard-footer-col6 
+                                        span.Quixy_Logo powered by 
+                                            img(src="images/home/Quixy_Logo.png")
+
+                div#quix-dashboard-overlay
+                div#quix-dashboard-message
+                    span
+                div#quix-dashboard-loader
+                    div#quix-dashboard-loader-overlay
+                    div#quix-dashboard-loader-img
+                        img(src="images/light-loader.gif")
+                div#quix-dashboard-popup
+                    div.quix-dashboard-popup-inner
+                        div.quix-dashboard-popup-title
+                            div.quix-dashboard-popup-title-inner
+                        div.quix-dashboard-popup-body
+                            div.quix-dashboard-popup-body-inner
+                        div.quix-dashboard-popup-footer
+                            div.quix-dashboard-popup-footer-inner
+                                button.save-popup Save
+                                button.cancel-popup Cancel
+                        div.quix-dashboard-close
+                            img(src="images/quix-close.png")

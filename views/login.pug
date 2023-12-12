@@ -1,0 +1,51 @@
+block variables
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    link(rel="shortcut icon", href="/favicon.ico")
+    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(name="theme-color", content="#000000")
+    title #{title}
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish")
+    link(rel="stylesheet" href="/css/style.css")
+    script(src="/js/jquery.js")
+    script(src="/js/custom.js")
+  body.login-page
+    div#root
+        div#quix-dashboard-wrapper
+          div#quix-dashboard-inner
+            //- div.access-denied-error
+              div.access-denied-error-inner
+                div.access-denied-error-title
+                  span To access Screengenius Dashboard, Please login with Gmail
+                  br
+                div.access-denied-error-button 
+                  div.access-denied-error-button-inner
+                    img(src="images/google-icon.png")
+                    a(href="/auth")#login-with-gmail Login
+            div.login-logo-outer
+              div.login-logo-inner
+                img(src="images/home/logo.png")
+            div.login-form-outer
+              div.login-form-inner
+                span.form-title Welcome to ScreenGenius
+                span.form-subtitle To get started, please sign in
+              div.login-form-block
+                div.login-item.google-login
+                  a(href="/auth")
+                    img(src="images/google-icon.png")
+                    span Google
+                div.login-item.facebook-login
+                  a(href="/auth/facebook")
+                    img(src="images/facebook-icon.png")
+                    span Facebook
+                div.login-item.linkedIn-login
+                  a(href="/auth/linkedin")
+                    img(src="images/linkedin-icon.png")
+                    span LinkedIn
+                div.login-item.Twitter-login
+                  a(href="/auth/twitter")
+                    img(src="images/twitter-icon.png")
+                    span Twitter
+              
